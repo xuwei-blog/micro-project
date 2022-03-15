@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--描述性标签,描述网站的信息 一般用来做SEO-->
+        <meta charset="UTF-8">
+        <meta name="keywords" content="网站的一些关键词">
+        <meta name="description" content="来这个地方可以学习HTML">
+        <title>HTML test</title>
+    </head>
+    <body>
+        <a name="top">top</a>
+
+        <!-- 标题 -->
+        <h1>一级标题</h1>
+        <h2>二级标题</h2>
+        <h3>三级标题</h3>
+        <h4>四级标题</h4>
+
+        <!--段落标签-->
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <!--换行标签 最好自闭和-->
+        <br/>
+        <!--水平线标签  最好自闭和-->
+        <hr/>
+        粗体:<h1><strong>粗体</strong></h1>
+        斜体:<h1><em>斜体</em></h1>
+
+        <!--特殊符号-->
+        空格:&nbsp;&nbsp;&nbsp; 
+        大于号:&gt;
+        小于号:&lt;
+        版权符号:&copy;
+        <hr/>
+        <!--图像 ../返回上级标签 title悬停文字-->
+        <img src="img/哔哩哔哩.png" alt="text" title="悬停文字" width="300" height="300">
+        <hr/>
+        <!--链接标签-->
+        <a href="test.html#down" target="_blank">跳转</a>
+        <a href="#top">回到顶部</a> 
+
+        <!--邮件链接-->
+        <a href="mailto:1319284583@qq.com">点击联系我</a>
+        
+        <!--有序列表 order list-->
+        <ol>
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+        </ol>
+        <hr/>
+        <!--无序列表 unprder list-->
+        <ul>
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+        </ul>
+        <hr/>
+        <!--定义列表  dl标签 dt列表名称 dd列表内容-->
+        <dl>
+            <dt>位置</dt>
+            <dd>上海</dd>
+            <dd>北京</dd>
+            <dd>深圳</dd>
+
+            <dt>内容</dt>
+            <dd>画画</dd>
+            <dd>吃饭</dd>
+            <dd>拉拉</dd>
+        </dl>
+
+        <!--表格标签 tr行  td列-->
+        <table border="1px">
+            <tr>
+                <td>1-1</td>
+                <td>1-2</td>
+                <td>1-3</td>
+                <td>1-4</td>
+            </tr>
+            <tr>
+                <td>2-1</td>
+                <td>2-2</td>
+                <td>2-3</td>
+                <td>2-4</td>
+            </tr>
+            <tr>
+                <td>3-1</td>
+                <td>3-2</td>
+                <td>3-3</td>
+                <td>3-4</td>
+            </tr>
+        </table>
+        <hr/>
+        <table border="1px">
+            <tr>
+                <td colspan="4">跨列</td>
+
+            </tr>
+            <tr>
+                <td rowspan="2">跨列</td>
+                <td>2-2</td>
+                <td>2-3</td>
+                <td>2-4</td>
+            </tr>
+            <tr>
+
+                <td>3-2</td>
+                <td>3-3</td>
+                <td>3-4</td>
+            </tr>
+        </table>
+
+        <!--内联框架-->
+        <iframe src="https://www.bilibili.com/" name="mainFrame" frameborder="0" 
+        width="1000px" heigh="100"></iframe>
+
+        <!--表单
+        action 表单提交的位置 可以是网站 也可以是一个请求处理地址
+        method 
+             post 安全 可以传输大文件
+             get看到url中的信息 高效
+        -->
+        <h1>注册</h1>
+        <form action="test.html" method="get">
+            <p>名字:<input type="text" value="xuwei" name="username" maxlength="6" size="30"></p>
+            <p>密码:<input type="password" name="pwd"></p>
+            <p>
+                <input type="submit">
+                <input type="reset">
+            </p>  
+            <!--单选框-->
+            <p>性别:
+                <input type="radio" name="gender" value="boy"/>男
+                <input type="radio" name="gender" value="girl"/>女
+            </p>
+
+            <!--多选框-->
+            <p>
+                <input type="checkbox" value="sleep" name="hobby">睡觉
+                <input type="checkbox" value="code" name="hobby">代码
+                <input type="checkbox" value="chat" name="hobby">聊天
+                <input type="checkbox" value="game" name="hobby" checked>游戏
+            </p>
+
+            <!--按钮-->
+            <p>
+                <input type="button" name="button1" value="点了没用">
+                <input type="image ">
+            </p>
+
+            <!-- 下拉框 列表框-->
+            <p>下拉框:
+                <select name="列表名称" >
+                    <option value="选项的值" >中国</option>
+                    <option value="选项的值">美国</option>
+                    <option value="选项的值" selected>日本</option>
+                </select>
+            </p>
+
+            <!--文本域-->
+            <p>文本域:
+                <textarea name="textarea" cols="5" rows="5">文本内容</textarea>
+            </p>
+
+            <!--文件域-->
+            <p>
+                <input type="file" name="files">
+                <input type="button" value="上传" name="upload">
+            </p>
+
+            <!--邮箱验证 -->
+            <input type="email" name="email">
+            <!--URL验证 -->
+            <input type="url" name="url">
+            
+            <!--数字验证 -->
+            <input type="number" name="number" max="100" min="0" step="13"> 
+
+            <!--滑块-->
+            <input type="range" name="voice" min="0" max="100" step="2">
+
+            <!--搜索框-->
+            <P>搜索框:
+                <input type="search" name="search">
+            </P>
+            <!--增强鼠标可用性-->
+            <label for="mark">点我试试</label>
+            <hr/>
+            <input type="text" id="mark">
+        </form>
+
+        <form>
+        <!--表单初级验证-->
+        <p>提示语:<input type="text" name="username" placeholder="请输入用户名"></p>
+        <p>必填:<input type="text" name="name" required></p>
+        <!--正则表达式-->
+        <p><input type="text" name="diymail" pattern=""></p>
+
+        <input type="submit" value="上传">
+        </form>
+        <!-- 段落 Lorem100-->
+        <p>随机一个段落 Lorem ipsum dolor  amet consectetur adipisicing elit. Quae itaque distinctio corrupti sint  consequatur voluptas dolor, delectus, non quidem deserunt repellat ad ipsa illum deleniti veniam placeat numquam magnam?</p>
+
+        <p><strong>加粗</strong> <em>斜体</em> 
+        <a href="https://baidu.com" target="_blank">baidu.com</a></p>
+
+        <!-- 列表 -->
+        <ul>
+            <li>list1</li>
+            <li>list2</li>
+            <li>list3</li>
+        </ul>
+        <ol>
+            <li>list1</li>
+            <li>list2</li>
+            <li>list3</li>
+        </ol>
+
+        <!-- table-->
+        <table>
+            <thead>
+                <tr>
+                    <!-- 很难看 可以用CSS美化-->
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Xu</td>
+                    <td>Wei</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Xu</td>
+                    <td>Wei</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Xu</td>
+                    <td>Wei</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- br是line breaker 但是用css比较好-->
+        <br>
+        <br>
+
+        <!-- hr水平线-->
+        <hr>
+
+        <!-- forms表单 -->
+        <!-- action处理表单逻辑问题 method是安全的方法 get所有的信息都出现在url里面-->
+        <form action ="form.js" method="POST">
+            <div>
+                <label>First Name</label>
+                <input type="text" name= "firstname" placeholder ="enter first name">
+            </div>
+            <div>
+                <label>Last Name</label>
+                <input type="text" name= "lasttname" placeholder ="enter last name">
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="email" name= "email" placeholder ="enter email">
+            </div>
+            <input type = "submit" value="Submit">
+        </form>
+
+        <br>
+
+        <button>This is a Button</button>
+
+        <!-- 图片 -->
+        <img style="width:100vw" src="https://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E5%9B%BE%E7%89%87&hs=0&pn=0&spn=0&di=7060663421280190465&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1305456094%2C3865830840&os=3330783663%2C95601121&simid=3417198601%2C116276182&adpicid=0&lpn=0&ln=30&fr=ala&fm=&sme=&cg=&bdtype=0&oriquery=%E5%9B%BE%E7%89%87&objurl=https%3A%2F%2Fgimg2.baidu.com%2Fimage_search%2Fsrc%3Dhttp%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2Ftp09%2F210611094Q512b-0-lp.jpg%26refer%3Dhttp%3A%2F%2Fimg.jj20.com%26app%3D2002%26size%3Df9999%2C10000%26q%3Da80%26n%3D0%26g%3D0n%26fmt%3Djpeg%3Fsec%3D1649217792%26t%3D145d78a4a3688227ca0c66cdccbed14c&fromurl=ippr_z2C%24qAzdH3FAzdH3Fooo_z%26e3B33da_z%26e3Bv54AzdH3FprAzdH3Fnn9mmb_z%26e3Bip4s&gsm=1&islist=&querylist=&dyTabStr=MCwzLDEsNiwyLDQsNSw3LDgsOQ%3D%3D" alt="this is a img tag">
+
+        <!-- 引用 -->
+        <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum veritatis, incidunt impedit unde, pariatur sed aperiam magnam voluptates minima, fugiat amet laudantium illum saepe nostrum explicabo facere sint vero rerum ratione? Ipsa, voluptatibus omnis? Corporis iste atque earum commodi nisi, fugit ut? Delectus quaerat deserunt odit esse, veritatis culpa natus laborum, voluptate, iusto itaque architecto dolorum sunt quibusdam maxime aut sequi quo vitae. Sunt pariatur ratione voluptate dolorum incidunt ipsum fugiat quos, at alias, sint saepe itaque nisi distinctio assumenda veritatis nesciunt accusamus facere sed doloribus possimus similique, asperiores adipisci. Quia, corrupti ipsam. Voluptates cumque similique ipsum, maiores exercitationem adipisci.</blockquote>
+
+        <p><abbr title="MIT shi sha wan yi er">MIT</abbr> is a prestigious college</p>
+
+        <p><cite>MIT is a prestigious college</cite> by dadiao</p>
+
+
+    </body>
+
+</html>
